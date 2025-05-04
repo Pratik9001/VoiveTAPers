@@ -157,19 +157,21 @@
             const confirmPassword = document.getElementById('confirmPassword').value;
             const error = document.getElementById('passwordMismatch');
             
-            let isValid =true;
+            
             if (password !== confirmPassword) {
                 error.style.display = 'block';
                 event.preventDefault();
             } else {
                 error.style.display = 'none';
             }
-            if (isValid) {
-                alert("Successfully registered"); // <-- Show alert
-                window.location.href = "login.html"; // Redirect to login page or another page
-            }
-            return false;
         });
+        let isValid =true;
+        if (isValid) {
+            alert("Successfully registered"); // <-- Show alert
+            window.location.href = "login.html"; // Redirect to login page or another page
+        }
+            
+        
     </script>
 </body>
 </html>
